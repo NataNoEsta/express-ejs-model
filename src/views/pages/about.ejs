@@ -10,16 +10,24 @@
         <%-include('../partials/header'); %>
     </header>
 
-    <main class="container d-flex col-8">
+    <main class="container">
         <div class="jumbotron">
             <h1 class="text-dark">This is great</h1>
             <p>Welcome to templating using EJS</p>
         </div>
-        
+        <section class="row">
+            <section class="col-9 h-100">
+                <h3>This is an about page</h3>
+                <p>Here could go some information</p>
+            </section>
+            <aside class="col-3 float-end h-100">
+                <h3 class="text-dark text-decoration-underline">Profile</h3>
+                <img src="https://placehold.co/200x200/png" />
+                <p>This is me!!</p>
+            </aside>
+        </section>
     </main>
-    <aside class="flex-column col-2 d-flex">
-        <h3>asd</h3>
-    </aside>
+
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
