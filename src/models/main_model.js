@@ -1,13 +1,21 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const { Schema, model } = mongoose
 
-const picturesSchema = new Schema({
-    title: String,
-    type: String,
-    url: String
-})
+const pictureSchema = new Schema(
+    {
+        title: String,
+        type: String,
+        url: String
+    },
+    {
+        collection: 'pictures'
+    }
+)
 
-const pictures = model("Pictures", picturesSchema)
+const Pictures = model("pictures", pictureSchema)
 
-module.exports = { picturesSchema, pictures }
+module.exports = {
+    Pictures
+}
