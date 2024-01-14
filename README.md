@@ -1,3 +1,3 @@
 ## express.js/ejs
 
-Basic structure for an Express app using EJS as a template engine
+A very basic Express - EJS - MongoDB app

@@ -22,13 +22,14 @@ const CONFIG = {
 
 // Conection to database
 
-const connection = async() => {
+const connection = async () => {
     await mongoose.connect(DATABASE_URL)
 }
 connection();
 
 // Events for open/close connection
-mongoose.connection.on('open', () => console.log('Conected to mongoose'))
+mongoose.connection
+    .on('open', () => console.log('Conected to mongoose'))
     .on('close', () => console.log('Conection closed'))
     .on('error', (error) => console.log('Conection error', error))
 
@@ -64,7 +65,7 @@ app.use('/items', main_routes)
 // })
 
 app.listen(PORT, () => {
-    console.log(`Servr started at port http://localhost:${PORT}`)
+    console.log(`App live at port http://localhost:${PORT}`)
 })
 
 module.exports = app
