@@ -12,8 +12,8 @@ const items = ((req, res) => {
 const collection = (async (req, res) => {
   try {
     let { id } = req.params
-    const getall = !id ? await Pictures.find().exec() : await Pictures.findOne({ _id: id }).exec();
-    res.status(200).json({ getall })
+    const getall = !id ? await Pictures.find().exec() : await Pictures.findById({ _id: id }).exec();
+    res.status(200).json(getall)
     console.log('fff',getall)
   } catch (error) {
     console.log(error)
