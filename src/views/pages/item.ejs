@@ -11,11 +11,8 @@
     </header>
 
     <main class="container-fluid flex-column">
-        <div class="jumbotron">
-            <h1 class="text-dark">This is great</h1>
-            <p>Welcome to templating using EJS</p>
-        </div>
-
+        <%- include('../partials/banner'); %>
+       
         <div class="container row">
 
 
@@ -23,7 +20,10 @@
                     <h3 class="text-dark text-center">
                         <%= data.title %>
                     </h3>
-           
+                    <div class="image-container h-auto">
+                        <img src="<%= data.url %>" alt="<%= data.url %>" class="img-fluid rounded" />
+                    </div>
+                    
                     <% if (data.isACookie) { %>
                         <p class="text-info text-center text-bg-info">This is true</p>
                         <% } %>
