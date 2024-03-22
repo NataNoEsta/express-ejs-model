@@ -5,20 +5,24 @@
     <%- include('../partials/head'); %>
 </head>
 
-<body class="container flex-grow-1 m-auto p-0">
+<body class="container flex-grow-1 m-auto p-0 h-100">
     <header class="container">
         <%-include('../partials/header'); %>
     </header>
 
-    <main class="container flex-column h-100">
-        <div class="jumbotron">
-            <h1 class="text-dark">This is great</h1>
-            <p>Welcome to templating using EJS</p>
+    <main class="container-fluid flex-column h-100">
+        <div class="jumbotron card-header">
+            <h1 class="text-dark-emphasis">This is fine!</h1>
+            <span>Or isn't it?</span>
         </div>
-
+        <div class="container row">
+            <div class="card m-lg-3 m-md-0 ms-sm-0">
+                <span>Hey</span>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="container-fluid">
         <%- include('../partials/footer'); %>
     </footer>
 </body>
