@@ -13,31 +13,34 @@
     <main class="container-fluid flex-column">
         <%- include('../partials/banner'); %>
 
-        <div class="container row">
-            <div class="inner d-flex row">
+            <div class="container row">
                 <% data.forEach((item)=> { %>
-                    <div class="item-container m-0 p-2 col-4">
-                        <a href="/item/<%= item.id %>">
-                            <h3 class="text-dark text-center">
-                            <%= item.title %>
-                            </h3>
-                        </a>
-                        <p class="text-dark text-center" id="<%= item.id %>">
-                            type: <%= item.type %>
-                        </p>
+                    <div class="inner col-6 col-md-3 col-sm-2">
 
-                        <div class="image-container h-auto">
-                            <img src="<%= item.url %>" alt="<%= item.url %>" class="img-fluid rounded" />
-                        </div>
-                        
-                        <!---<% if (item.isACookie) { %>
+                        <div class="item-container card m-lg-3 m-sm-1">
+                            <a href="/item/<%= item.id %>">
+                                <h3 class="text-dark text-center">
+                                    <%= item.title %>
+                                </h3>
+                            </a>
+                            <p class="text-dark text-center" id="<%= item.id %>">
+                                type: <%= item.type %>
+                            </p>
+
+                            <div class="image-container h-auto">
+                                <img src="<%= item.url %>" alt="<%= item.url %>" class="img-fluid rounded" />
+                            </div>
+
+                            <!---<% if (item.isACookie) { %>
                             <p class="text-info text-center text-bg-info">This is true</p>
                         <% } %>
                         </div>-->
 
+                        </div>
+
+
                     </div>
                     <% }) %>
-            </div>
     </main>
 
     <footer>
